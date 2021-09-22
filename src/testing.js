@@ -46,16 +46,10 @@ function first() {
 }
 second();
 let sum = [];
-const proto = [[], [], [], [], [], []];
 
 let total = [];
 let stall = { dardo: 12, paraga: 12.3 };
 
-const mixed = [
-  { name: "DADDA", lastName: "dsadsa", price: 23 },
-  { name: "apappa", lastName: "dkjkjkja", price: 42 },
-  { name: "ARPANET", lastName: "LELELEL", price: 12 },
-];
 
 //console.log(mixed.map((value, index) => value.name));
 
@@ -69,27 +63,21 @@ const news = mixed.map((value, index) => [
 
 console.log(news);
 */
+let amount = [];
 
-const DUMMY_MEALS = [
-  {
-    id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
-    idForI: 1,
-  },
-  {
-    id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
-    idForI: 2,
-  },
+let some = [2];
+const mixed = [
+  { name: "DADDA", lastName: "dsadsa", price: 23 },
+  { name: "apappa", lastName: "dkjkjkja", price: 42 },
+  { name: "ARPANET", lastName: "LELELEL", price: 12 },
 ];
-const AMOUNT = [27, 3];
 
-const testing = [...DUMMY_MEALS];
-testing.map((value, index) => (value.amount = AMOUNT[index]));
-//const updated = DUMMY_MEALS.map((value, index) => ...value);
-console.log(testing.map((value, index) => index));
-//console.log(testing);
+const proto = [[3], [4], [6], [], [12], []];
+
+for (let t = 0; t < mixed.length; t++) {
+  mixed.map((value, index) => (amount[index] = [1]));
+}
+
+const something = [...proto];
+
+console.log(something);

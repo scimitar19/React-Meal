@@ -23,8 +23,8 @@ const MealItemForm = (props) => {
     /////////////////////////////////////////////
     for (let input = 1; input <= INP2.length; input++) {
       if (props.inputFromAM === input) {
-        INP1[input - 1] = inputValue;
-        // console.log("passed THIS IS INPUT " + input);
+        INP1 = currentValue;
+        console.log("passed THIS IS INPUT " + input);
 
         // console.log("This is INP1 = " + INP1);
       }
@@ -33,7 +33,8 @@ const MealItemForm = (props) => {
     let KOLICINA = INP1;
 
     props.amountData(KOLICINA);
-    /// console.log("Ovo je kolicina " + KOLICINA);
+    //console.log(KOLICINA);
+    console.log("Ovo je kolicina");
   };
 
   return (

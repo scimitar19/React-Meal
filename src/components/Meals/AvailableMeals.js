@@ -1,6 +1,6 @@
 import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card";
-//import Clicking from "./Clicking.js";
+
 import MealItem from "./MealItem/MealItem";
 
 const DUMMY_MEALS = [
@@ -35,45 +35,30 @@ const DUMMY_MEALS = [
   },
    */
 ];
-//let UPDATED = [];
+let AMOUNT = [];
+
 const AvailableMeals = (props) => {
-  //const [currentArray, setArray] = useState(DUMMY_MEALS);
-  let AMOUNT = [3, 4];
-  const Updated = [...DUMMY_MEALS];
-  Updated.map((value, index) => (value.amount = AMOUNT[index]));
+  // const [currentAmount, setAmount] = useState(
+  //   (AMOUNT = DUMMY_MEALS.map((value, index) => (AMOUNT[index] = [1])))
+  // );
 
   const showMeAmount = (listener) => {
     let amount = listener;
     props.dataAmount2(amount);
-    // AMOUNT.push(amount);
-    // console.log(amount);
-    // console.log("fffffffffffffffffffffffff");
-    //////////////////////////------------------------------/////////////////////////
-
-    // for (let i = 0; i < DUMMY_MEALS.length; i++) {
-    //   DUMMY_MEALS[i].amount = AMOUNT[i];
-    //   if (DUMMY_MEALS[i].amount === undefined) {
-    //     DUMMY_MEALS[i].amount = 1;
-    //   }
-    // }
-
-    shoo();
-  };
-  ////////
-
-  const shoo = () => {
-    console.log(AMOUNT[0]);
-    console.log("ggggNO 1 IN AMOUNTggggggggg");
+    AMOUNT.push(amount);
+    //setAmount(AMOUNT.push(amount));
     console.log("___________________");
     console.log("!!!FROMAVAILABLE!!!");
-    console.log(Updated);
+    console.log(AMOUNT);
+    // AMOUNT.push(amount);
     console.log("^^FROMAVAILABLE^^");
-    console.log("Sushi " + Updated[0].amount);
-    console.log("Snicla " + Updated[1].amount);
   };
+  ////////////////////
 
-  ////////////////////////////------------------------------/////////////////////////
+  ///////////////------------------------------////////////////////
 
+  const Updated = [...DUMMY_MEALS];
+  Updated.map((value, index) => (value.amount = AMOUNT[index]));
   ///----------------------TOCART
 
   const showMe = (param) => {

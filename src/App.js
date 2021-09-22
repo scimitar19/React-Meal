@@ -4,23 +4,27 @@ import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
 
 let passedAmount = 1;
-
+let arr = [];
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
   const [cartAmount, setCartAmount] = useState(0);
-  const [currentMeal, setMeal] = useState("");
 
   const showMe = (param) => {
-    //const mealsFromApp = param;
-    setMeal(param);
-    console.log(param);
-    console.log("FROM APP");
+    const mealsFromApp = param;
 
-    // console.log(arr);
-    // console.log("FROMAPPPPP");
-    // arr.push(mealsFromApp);
-    // setMeal(arr);
+    console.log("FROM APP");
+    arr.push(mealsFromApp);
+    console.log(arr);
   };
+
+  // const Soo = () => {
+  //   console.log(arr);
+  //   console.log("FROM SOO");
+  // };
+  // console.log(arr);
+  // console.log("FROMAPPPPP");
+  // arr.push(mealsFromApp);
+  // setMeal(arr);
 
   // const amountFromApp = (param) => {
   //   const amount = param;
@@ -29,6 +33,8 @@ function App() {
   // };
 
   const showCartHandler = () => {
+    console.log(arr);
+    console.log("Open/Close");
     setCartIsShown(true);
   };
 
@@ -41,7 +47,7 @@ function App() {
       {cartIsShown && (
         <Cart
           buttonFn={hideCartHandler}
-          mealAppToCart={showMe()}
+          mealAppToCart={arr}
           amountAppToCart={passedAmount}
         />
       )}

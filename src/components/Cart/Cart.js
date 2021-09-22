@@ -9,16 +9,16 @@ const Cart = (props) => {
   // console
 
   const amountPerItem = props.amountAppToCart;
-  const toCarting = [props.mealAppToCart];
+  const toCarting = props.mealAppToCart;
   const names = toCarting.map((value, index) => value);
-  console.log(names);
+  console.log(toCarting);
   console.log("^^FROMCART^^");
 
-  let array = [];
-  for (let i = 0; i < toCarting.length; i++) {
-    array.push([amountPerItem]);
-    toCarting[i].amount = amountPerItem[i];
-  }
+  // let array = [];
+  // for (let i = 0; i < toCarting.length; i++) {
+  //   array.push([amountPerItem]);
+  //   toCarting[i].amount = amountPerItem[i];
+  // }
 
   const summarized = toCarting.map((value) => value.price * amountPerItem);
   // console.log("This is carting name " + summarized);
